@@ -41,7 +41,7 @@ func minutesToDuration(n uint8) Duration {
 // Convert a duration to a time of day.
 func durationToTimeOfDay(d time.Duration) TimeOfDay {
 	if d < 0 || 24*time.Hour <= d {
-		log.Panicf("duration %v is not a valid time of day", d)
+		log.Printf("duration %v is not a valid time of day", d)
 	}
 	return TimeOfDay(d)
 }
